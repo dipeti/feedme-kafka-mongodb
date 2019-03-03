@@ -1,1 +1,9 @@
+spring:
+  data:
+    mongodb:
+      database: "feedme-db"
+  kafka:
+    topic: "dev.betting"
+    consumer:
+      auto-offset-reset: earliest
 
