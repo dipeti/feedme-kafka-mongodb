@@ -2,8 +2,10 @@ spring:
   data:
     mongodb:
       database: "feedme-db"
+      host: localhost
   kafka:
-    topic: "dev.betting"
+    topic: "betting"
     consumer:
       auto-offset-reset: earliest
-
+server:
+  port: 8081
