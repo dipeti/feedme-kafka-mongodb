@@ -33,19 +33,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ActiveProfiles("test")
 public class ApplicationIntegrationTest {
     private static final int FIVE_SECONDS = 5000;
-    @Autowired
-        KafkaListenerEndpointRegistry defaultKafkaListenerEndpointRegistry;
-    @Autowired
-    EmbeddedKafkaBroker embeddedKafka;
-    @Autowired
-    KafkaTemplate<?, String> kafkaTemplate;
-    @Autowired
-    ObjectMapper objectMapper;
-    @Value("${spring.kafka.topic}")
-    String topic;
-
-    @Autowired
-    FeedMeRepository repository;
+    @Autowired KafkaListenerEndpointRegistry defaultKafkaListenerEndpointRegistry;
+    @Autowired EmbeddedKafkaBroker embeddedKafka;
+    @Autowired KafkaTemplate<?, String> kafkaTemplate;
+    @Autowired ObjectMapper objectMapper;
+    @Value("${spring.kafka.topic}") String topic;
+    @Autowired FeedMeRepository repository;
 
     @BeforeEach
     void setUp() {

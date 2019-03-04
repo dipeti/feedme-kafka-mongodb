@@ -9,6 +9,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
+import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 
 @Component
@@ -22,7 +23,8 @@ public class MessageListener {
 
     @KafkaListener(topics = "${spring.kafka.topic}", groupId = "mongo-clients", concurrency = "${spring.kafka.listener.concurrency:2}")
     public void listen(DomainResource domainResource) {
-        log.info(domainResource.getMsgId());
+        long start = System.nanoTime();
+        log.debug(domainResource.getMsgId());
         switch (domainResource.getOperation()) {
             case "create":
                 applyOnDocument(domainResource, repo::saveEvent, repo::addMarket, repo::addOutcome);
@@ -33,6 +35,8 @@ public class MessageListener {
             default:
                 log.warn("Ignoring message=[{}]", domainResource);
         }
+        long stop = System.nanoTime();
+        log.debug("Processing message took=[{}ms]", TimeUnit.NANOSECONDS.toMillis(stop - start));
     }
 
 

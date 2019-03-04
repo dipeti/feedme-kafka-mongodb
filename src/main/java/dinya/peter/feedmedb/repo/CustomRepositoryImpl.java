@@ -96,7 +96,7 @@ public class CustomRepositoryImpl implements CustomRepository {
 
     private void logAndThrowIfUnaffected(DomainResource resource, UpdateResult result) {
         if (result.getModifiedCount() < 1 && result.getMatchedCount() < 1) {
-            log.warn("Update did not make any changes, [{}]", resource);
+            log.error("Update did not make any changes, [{}]", resource);
             throw new RuntimeException(String.format("Update did not make any changes with msgId=[%s]!", resource.getMsgId()));
         }
     }
