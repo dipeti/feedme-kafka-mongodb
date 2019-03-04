@@ -1,0 +1,9 @@
+spring:
+  kafka:
+    bootstrap-servers: ${spring.embedded.kafka.brokers}
+    topic: "test-test"
+    listener:
+      concurrency: 1
+  mongodb:
+    embedded:
+      version: 4.0.2 #array_filters was introduced in 3.6

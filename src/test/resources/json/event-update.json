@@ -1,0 +1,13 @@
+{
+  "msgId": "1310",
+  "operation": "update",
+  "type": "event",
+  "timestamp": 1551654695484,
+  "eventId": "eventId",
+  "category": "Football",
+  "subCategory": "Sky Bet Championship",
+  "name": "|Hull| vs |Aston Villa|",
+  "startTime": 1551654724161,
+  "displayed": true,
+  "suspended": true
+}

@@ -101,7 +101,6 @@ public class CustomRepositoryImpl implements CustomRepository {
         }
     }
 
-
     private Event updateEvent(String eventId, Update update) {
         return mongoTemplate.findAndModify(query(where("_id").is(eventId)), update, Event.class);
     }

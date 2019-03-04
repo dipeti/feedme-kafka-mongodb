@@ -1,0 +1,13 @@
+{
+  "msgId": "1460",
+  "operation": "create",
+  "type": "outcome",
+  "timestamp": 1551654697542,
+  "marketId": "marketId",
+  "outcomeId": "outcomeId",
+  "name": "|Stan Wawrinka| 3-1",
+  "price": "11/4",
+  "displayed": true,
+  "suspended": false,
+  "eventId": "eventId"
+}

@@ -1,0 +1,11 @@
+{
+  "msgId": "1403",
+  "operation": "create",
+  "type": "market",
+  "timestamp": 1551654696476,
+  "eventId": "eventId",
+  "marketId": "marketId",
+  "name": "Both Teams To Score",
+  "displayed": true,
+  "suspended": false
+}

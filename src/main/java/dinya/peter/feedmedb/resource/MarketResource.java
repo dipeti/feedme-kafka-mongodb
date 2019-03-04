@@ -28,6 +28,6 @@ public class MarketResource extends DomainResource {
 
     @Override
     public Optional<String> getParentId() {
-        return Optional.of(eventId);
+        return Optional.ofNullable(eventId);
     }
 }

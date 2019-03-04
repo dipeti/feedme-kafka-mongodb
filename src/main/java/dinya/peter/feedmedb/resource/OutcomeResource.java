@@ -33,7 +33,7 @@ public class OutcomeResource extends DomainResource {
 
     @Override
     public Optional<String> getParentId() {
-        return Optional.of(marketId);
+        return Optional.ofNullable(marketId);
     }
 
 }
